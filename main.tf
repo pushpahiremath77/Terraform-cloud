@@ -10,11 +10,9 @@ terraform {
 #AWS provider
 provider "aws" {
   region     = var.region
-  access_key = var.access_key
-  secret_key = var.secret_key
+  access_key = "AKIATTSKFVUKOQNPJ77D"
+  secret_key = "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"
 }
-
-
 
 resource "aws_vpc" "my_vpc" {
   cidr_block = var.vpc_cidr

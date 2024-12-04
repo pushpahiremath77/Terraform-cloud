@@ -139,13 +139,13 @@ ingress {
     from_port   = var.ssh_port
     to_port     = var.ssh_port
     protocol    = var.tcp_protocol
-    cidr_blocks = "0.0.0.0/0"  
+    cidr_blocks = "[0.0.0.0/0]"  
   }
 egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"  
-    cidr_blocks = "0.0.0.0/0"  
+    cidr_blocks = "[0.0.0.0/0]"  
   }
 tags = {
     Name = var.frontend_security_group_name
@@ -172,13 +172,13 @@ resource "aws_security_group" "backend_sg" {
     from_port   = var.ssh_port
     to_port     = var.ssh_port
     protocol    = var.tcp_protocol
-    cidr_blocks = "0.0.0.0/0"
+    cidr_blocks = "[0.0.0.0/0]"
   }
  egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = "0.0.0.0/0"
+    cidr_blocks = "[0.0.0.0/0]"
   }
 
 tags = {
@@ -203,13 +203,13 @@ ingress {
     from_port   = var.ssh_port
     to_port     = var.ssh_port
     protocol    = var.tcp_protocol
-    cidr_blocks = [var.allow_all_ip]
+    cidr_blocks = "[0.0.0.0/0]"
   }
 egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = [var.allow_all_ip]
+    cidr_blocks = "[0.0.0.0/0]"
   }
 
   tags = {

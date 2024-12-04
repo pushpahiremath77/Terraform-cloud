@@ -7,12 +7,13 @@ variable "region" {
 variable "access_key" {
         description = "access_key"
         type        = string
+        default     = "AKIATTSKFVUKOQNPJ77D"
 }
 
 variable "secret_key" {
         description = "Secret access key"
         type        = string
-
+        default     = "nfJJKyCNYJBRmMNSm6LGjRZNqRL8Q1GOMrHxzyys"
 }
 
 variable "instance_type" {

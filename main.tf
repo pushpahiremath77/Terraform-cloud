@@ -23,3 +23,10 @@ resource "aws_instance" "my_ec2" {
     Name = "ec2-cloud"
   }
 }
+
+resource "aws_vpc" "my_vpc" {
+  cidr_block = "10.0.0.0/16"
+  tags = {
+    Name = "vpc-cloud"
+  }
+}

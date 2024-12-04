@@ -175,20 +175,20 @@ variable "backend_name" {
   default     = "BackendInstance"
 }
 
-variable "database_security_group_name" {
-  type        = string
-  description = "Name for the Database security group"
-  default     = "DatabaseSG"
-}
+#variable "database_security_group_name" {
+  #type        = string
+  #description = "Name for the Database security group"
+  #default     = "DatabaseSG"
+#}
 
-variable "database_ami_id" {
-  description = "AMI ID for the database instance"
-  type        = string
-   default     = "ami-0fc98e06ffb6551f5"
-}
+#variable "database_ami_id" {
+  #description = "AMI ID for the database instance"
+  #type        = string
+  #default     = "ami-0fc98e06ffb6551f5"
+#}
 
-variable "database_name" {
-  description = "Name for the Database instance"
-  type        = string
-  default     = "DatabaseInstance"
-}
+#variable "database_name" {
+  #description = "Name for the Database instance"
+  #type        = string
+  #default     = "DatabaseInstance"
+#}

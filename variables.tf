@@ -131,7 +131,7 @@ variable "nat_gateway_name" {
   default = "cloud-NAT"
 }
 
-ariable "private_route_table_name" {
+variable "private_route_table_name" {
   type        = string
   description = "Name for the private route table"
   default     = "cloud-private-RT"

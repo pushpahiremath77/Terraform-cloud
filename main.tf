@@ -222,16 +222,16 @@ egress {
   }
 }
 
-#Database instance
-  #resource "aws_instance" "database" {
-  #ami           = var.database_ami_id
-  #instance_type = var.instance_type
-  #key_name      = var.key_pair
-  #security_groups = [aws_security_group.database_sg.id]
-     #tags = {
-    #Name = var.database_name
-  #}
-#}
+Database instance
+  resource "aws_instance" "database" {
+  ami           = var.database_ami_id
+  instance_type = var.instance_type
+  key_name      = var.key_pair
+  security_groups = [aws_security_group.database_sg.id]
+     tags = {
+    Name = var.database_name
+  }
+}
 
 
 

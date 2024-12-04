@@ -221,18 +221,17 @@ egress {
     Name = var.database_security_group_name
   }
 }
-#Database instance
-  resource "aws_instance" "database" {
-  ami           = var.database_ami_id
-  instance_type = var.instance_type
-  subnet_id     = aws_subnet.private_subnet_2.id
-  key_name      = var.key_pair
-  security_groups = [aws_security_group.database_sg.id]
 
-     tags = {
-    Name = var.database_name
-  }
-}
+#Database instance
+  #resource "aws_instance" "database" {
+  #ami           = var.database_ami_id
+  #instance_type = var.instance_type
+  #key_name      = var.key_pair
+  #security_groups = [aws_security_group.database_sg.id]
+     #tags = {
+    #Name = var.database_name
+  #}
+#}
 
 
 

@@ -222,12 +222,13 @@ egress {
   }
 }
 
-  resource "aws_instance" "database" {
+resource "aws_instance" "database" {
   ami           = var.database_ami_id
   instance_type = var.instance_type
+  subnet_id     = aws_subnet.private_subnet_2.id
   key_name      = var.key_pair
-  vpc_security_group_ids = [aws_security_group.database_sg.id]
-     tags = {
+  security_groups = [aws_security_group.database_sg.id]
+    tags = {
     Name = var.database_name
   }
 }

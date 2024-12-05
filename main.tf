@@ -226,7 +226,7 @@ egress {
   ami           = var.database_ami_id
   instance_type = var.instance_type
   key_name      = var.key_pair
-  security_groups = [aws_security_group.database_sg.id]
+  vpc_security_group_ids = [aws_security_group.database_sg.id]
      tags = {
     Name = var.database_name
   }

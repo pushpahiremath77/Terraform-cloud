@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-#AWS provider
+
 provider "aws" {
   region     = var.region
   access_key = "AKIATTSKFVUKOQNPJ77D"
@@ -207,8 +207,8 @@ ingress {
     to_port     = var.ssh_port
     protocol    = var.tcp_protocol
     cidr_blocks = ["0.0.0.0/0"]
-
   }
+  
 egress {
     from_port   = 0
     to_port     = 0
@@ -222,7 +222,6 @@ egress {
   }
 }
 
-Database instance
   resource "aws_instance" "database" {
   ami           = var.database_ami_id
   instance_type = var.instance_type

@@ -14,12 +14,6 @@ provider "aws" {
   secret_key = "nfJJKyCNYJBRmMNSm6LGjRZNqRL8Q1GOMrHxzyys"
 }
 
-resource "aws_instance" "import-Ec2" {
-
-}
-
-
-
 resource "aws_vpc" "my_vpc" {
   cidr_block = var.vpc_cidr
   tags = {

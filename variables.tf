@@ -6,12 +6,12 @@ variable "region" {
 
 variable "access_key"{
 type    = string
-
+default = "AKIATTSKFVUKOQNPJ77D"
 }
 
 variable "secret_key"{
 type    = string
-
+default = "nfJJKyCNYJBRmMNSm6LGjRZNqRL8Q1GOMrHxzyys"
 }
 
 

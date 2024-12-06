@@ -4,6 +4,17 @@ variable "region" {
         default     = "ap-southeast-1"
 }
 
+variable "access_key"{
+type    = string
+default = "AKIATTSKFVUKOQNPJ77D"
+}
+
+variable "secret_key"{
+type    = string
+default = "nfJJKyCNYJBRmMNSm6LGjRZNqRL8Q1GOMrHxzyys"
+}
+
+
 variable "instance_type" {
   description = "Type of Ec2 instance"
   type        = string
